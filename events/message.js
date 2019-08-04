@@ -10,7 +10,7 @@ module.exports = (client, message) => {
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在唐詩後面加上"第(1至300)"/隨機）');return}
 
   // this ain't working at all below
-  else if (message.content === '!唐詩'+(amount)) {
+  else if (message.content === '!唐詩'+(number)) {
   
     if (isNaN(amount)) {
      message.reply('你需要輸入一到三百的數字');return
