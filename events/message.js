@@ -18,7 +18,7 @@ module.exports = (client, message) => {
     }
   }
 
-var poems = [TANG(1,9)];
+var poems = [TANG[1,9]];
 var random_poems = poems[Math.floor(Math.random()*poems.length)];
 if (message.content ===('!唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
 
