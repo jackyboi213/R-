@@ -36,9 +36,6 @@ if (message.content ===('!身份組')) {message.reply
     message.reply
     (random_ROLEA).then().catch(console.error);return}
 
-    var ROLEB = [roleB1,roleB2,roleB3];
-    var random_ROLEB = ROLEB[Math.floor(Math.random()*ROLEB.length)];
-
 if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
   .catch(console.error);}
   else message.channel.send
