@@ -33,7 +33,7 @@ if (message.content ===('!身份組')) {message.reply
 
   if (message.content ===('!身份組 香港')){message.member.addRole(ROLE1).then(console.log)
     .catch(console.error);
-    message.member.send
+    message.channel.send
     (random_ROLEA).then().catch(console.error);return}
 
 if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
