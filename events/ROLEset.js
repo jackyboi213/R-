@@ -22,5 +22,7 @@ if (message.content ===('!身份組')) {message.reply
   if (message.content ===('!身份組 台灣')){message.author.addRole(ROLE2).then(console.log)
     .catch(console.error);
 
-}
-}
+                                     }
+   else message.channel.send
+    (
+        '對不起，那個指令我的主人還沒有加入我的程式内，有更多問題請找我的主人。')};
