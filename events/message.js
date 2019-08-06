@@ -22,8 +22,8 @@ if (message.content ===('!唐詩隨機')) {message.channel.send(random_poems).th
 
 // role stuff
 
-let ROLE1 = message.guild.roles.find(r => r.name === "香港");
-let ROLE2 = message.guild.roles.find(r => r.name === "台灣");
+let ROLE1 = message.guild.roles.find(role => role.name === "香港");
+let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
 
 if (message.content ===('!身份組')) {message.reply
   ('你得在那個指令後面加上你要的身份組的名字。');return}
