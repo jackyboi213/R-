@@ -31,12 +31,12 @@ if (message.content ===('!身份組')) {message.reply
   var ROLEA = [roleA1,roleA2,roleA3];
   var random_ROLEA = ROLEA[Math.floor(Math.random()*ROLEA.length)];
 
-  if (message.content ===('!身份組 香港')){member.addRole(ROLE1).then(console.log)
+  if (message.content ===('!身份組 香港')){message.member.addRole(ROLE1).then(console.log)
     .catch(console.error);
-    message.reply
+    message.member.send
     (random_ROLEA).then().catch(console.error);return}
 
-if (message.content ===('!身份組 台灣')){member.addRole(ROLE2).then(console.log)
+if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
   .catch(console.error);return}
   else message.channel.send
   (
