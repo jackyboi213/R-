@@ -18,4 +18,6 @@ roleA3 ='您現在是身分組(香港)的新成員，我們歡迎您！'
 roleB1 =''
 roleB2 =''
 roleB3 =''
+let ROLE1 = message.guild.roles.find(r => r.name === "香港");
+let ROLE2 = message.guild.roles.find(r => r.name === "台灣");
 amount = (1-300)
