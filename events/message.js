@@ -22,11 +22,9 @@ var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
 var random_poems = poems[Math.floor(Math.random()*poems.length)];
 if (message.content ===('!唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
 
-  else message.channel.send
-    (
-        '對不起，那個指令我的主人還沒有加入我的程式内，有更多問題請找我的主人。')};
 
-  
+
+}
 
 
   
