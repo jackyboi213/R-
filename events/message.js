@@ -37,7 +37,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
 if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
   .catch(console.error);return}
 // HAVEN'T UPDATE TO GITHUB 
-  if (message.startsWith('!身份組')) {message.reply
+  if (message.content.startsWith('!身份組')) {message.reply
     ('你得在那個指令後面加上你要並有效的身份組的名字。');return}
 
   else message.reply
