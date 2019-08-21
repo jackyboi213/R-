@@ -17,7 +17,7 @@ module.exports = (client, message) => {
     }
   }
 
-  if (message.content.has('I am your father')){
+  if (message.content.includes('I am your father')){
     message.channel.send
     ('NNNOOOOOOOOOOOOOOOOOOO!!!!!!')
   }
