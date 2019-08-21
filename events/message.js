@@ -1,8 +1,8 @@
 module.exports = (client, message) => {
   if(message.author.bot) return;
-    if (message.content.includes('I am your father')){
-    message.channel.send
-    ('NNNOOOOOOOOOOOOOOOOOOO!!!!!!')
+  if (message.content.includes('I am your father')){setTimeout(function(){ 
+    message.channel.send('NNNOOOOOOOOOOOOOOOOOOO!!!!!!');return
+   } , 2000)
   }
   if(!message.content.startsWith(prefix))return;
     if (message.content === ('!R')){
