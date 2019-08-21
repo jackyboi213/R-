@@ -2,8 +2,9 @@ module.exports = (client, message) => {
   if(message.author.bot) return;
   if (message.content.includes('I am your father')){setTimeout(function(){ 
     message.channel.send('NNNOOOOOOOOOOOOOOOOOOO!!!!!!');return
-   } , 2000)
+   } , 1680)
   }
+
   if(!message.content.startsWith(prefix))return;
     if (message.content === ('!R')){
       message.reply
@@ -37,8 +38,10 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
 
   if (message.content ===('!身份組 香港')){message.member.addRole(ROLE1).then(console.log)
     .catch(console.error);
-    message.reply
+    setTimeout(function(){ Message.reply
     (random_ROLEA).then().catch(console.error);return}
+    , 2100)
+  }
 
 if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
   .catch(console.error);return}
@@ -49,6 +52,11 @@ if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then
   else message.reply
   (
       '對不起，那個指令我的主人還沒有加入我的程式内，有更多問題請找我的主人。')};
+
+
+
+  
+
 
 
 
