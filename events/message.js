@@ -37,8 +37,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var random_ROLEA = ROLEA[Math.floor(Math.random()*ROLEA.length)];
 
   if (message.content ===('!身份組 香港')){message.member.addRole(ROLE1).then(console.log)
-    .catch(console.error);
-    setTimeout(function(){ Message.reply
+    .catch(console.error); setTimeout(function(){ message.reply
     (random_ROLEA).then().catch(console.error);return}
     , 2100)
   }
@@ -52,11 +51,6 @@ if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then
   else message.reply
   (
       '對不起，那個指令我的主人還沒有加入我的程式内，有更多問題請找我的主人。')};
-
-
-
-  
-
 
 
 
