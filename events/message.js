@@ -1,5 +1,9 @@
 module.exports = (client, message) => {
   if(message.author.bot) return;
+    if (message.content.includes('I am your father')){
+    message.channel.send
+    ('NNNOOOOOOOOOOOOOOOOOOO!!!!!!')
+  }
   if(!message.content.startsWith(prefix))return;
     if (message.content === ('!R')){
       message.reply
@@ -17,10 +21,7 @@ module.exports = (client, message) => {
     }
   }
 
-  if (message.content.includes('I am your father')){
-    message.channel.send
-    ('NNNOOOOOOOOOOOOOOOOOOO!!!!!!')
-  }
+
 var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
 var random_poems = poems[Math.floor(Math.random()*poems.length)];
 if (message.content ===('!唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
