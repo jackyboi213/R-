@@ -38,8 +38,8 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
 
   if (message.content ===('!身份組 香港')){message.member.addRole(ROLE1).then(console.log)
     .catch(console.error); setTimeout(function(){ message.reply
-    (random_ROLEA).then().catch(console.error);return}
-    , 2100)
+    (random_ROLEA).then().catch(console.error)}
+    , 2100);return
   }
 
 if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
@@ -54,4 +54,3 @@ if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then
 
 
 
-  
