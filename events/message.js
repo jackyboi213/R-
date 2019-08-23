@@ -1,10 +1,10 @@
 module.exports = (client, message) => {
   if(message.author.bot) return;
-  if (message.content.includes('I am your father')){setTimeout(function(){ 
+  if (message.content.includes(father1,father2,father3,father4,father5)){setTimeout(function(){ 
     message.channel.send('NNNOOOOOOOOOOOOOOOOOOO!!!!!!');return
    } , 1680)
   }
-
+// update em to github. 21/8/2019
   if(!message.content.startsWith(prefix))return;
     if (message.content === ('!R')){
       message.reply
@@ -54,3 +54,4 @@ if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then
 
 
 
+  
