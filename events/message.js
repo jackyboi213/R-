@@ -10,17 +10,23 @@ module.exports = (client, message) => {
       message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return}
 
- else if (message.content ===('!唐詩')) {message.reply
+ else if (message.content ===('!唐詩功能')) {message.reply
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在唐詩後面加上"第(1至300)"/隨機）');return}
 
-  // this ain't working at all below
-  if (message === '!唐詩'+(amount)) { 
   
-    if (isNaN(amount)) {
-     message.reply('你需要輸入一到三百的數字');return
+  // this ain't working at all below
+  if (message === '!唐詩') { 
+    const amount = parseInt(args[0])+1;
+  
 
+    if (isNaN(amount)) {
+     return message.reply('你需要在‘!唐詩’後輸入有效的數字');
+i
     }
-  }
+    else if (amount <= 1 || amount > 301) {
+      return message.reply('你得輸入1到300的數字!(現在只有1到9可用)');}
+  message.channel.send('TANG',amount, true)
+    }
 
 
 var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
@@ -42,9 +48,15 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
     , 2100);return
   }
 
+  var ROLEB = [roleB1,roleB2,roleB3,roleB3,roleB3];
+  var random_ROLEB = ROLEB[Math.floor(Math.random()*ROLEB.length)];
+
 if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
-  .catch(console.error);return}
-// HAVEN'T UPDATE TO GITHUB 
+  .catch(console.error), setTimeout(function(){ message.reply
+    (random_ROLEB).then().catch(console.error)}
+    , 2100);return
+  }
+
   if (message.content.startsWith('!身份組')) {message.reply
     ('你得在那個指令後面加上你要並有效的身份組的名字。');return}
 
