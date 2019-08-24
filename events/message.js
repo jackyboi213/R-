@@ -13,18 +13,17 @@ module.exports = (client, message) => {
  else if (message.content ===('!詩人')) {message.reply
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在唐詩後面加上"第(1至300)"/隨機）');return}
 
-  
   // this ain't working at all below
-  if (message === `!唐詩`) { 
+ else if (message.content === (`!唐詩`)) { 
     const amount = parseInt(args[0])+1;
   
 
     if (isNaN(amount)) {
-     return message.reply('你需要在‘!唐詩’後輸入有效的數字');
+      message.reply('你需要在‘!唐詩’後輸入有效的數字');return
 i
     }
-    else if (amount <= 1 || amount > 301) {
-      return message.reply('你得輸入1到300的數字!(現在只有1到9可用)');}
+    else if (amount <= 0 || amount > 301) {
+       message.reply('你得輸入1到300的數字!(現在只有1到9可用)');return}
   message.channel.send(TANG,amount)
     }
 
