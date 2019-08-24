@@ -24,11 +24,10 @@ module.exports = (client, message) => {
       message.reply('你需要在‘!唐詩’後輸入有效的數字');return
 
     }
-    else if (amount <= 0 || amount > 301) {
+    else if (amount <= 0 || amount > 300) {
        message.reply('你得輸入1到300的數字!(現在只有1到9可用)');return}
  // this is the one which has issues functioning
-  message.channel.send[TANG,amount,true]
-    }
+  message.channel.send((TANG)`${amount}`) }
 
 
 var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
