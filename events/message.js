@@ -10,12 +10,12 @@ module.exports = (client, message) => {
       message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return}
 
- else if (message.content ===('!唐詩功能')) {message.reply
+ else if (message.content ===('!詩人')) {message.reply
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在唐詩後面加上"第(1至300)"/隨機）');return}
 
   
   // this ain't working at all below
-  if (message === '!唐詩') { 
+  if (message === `!唐詩`) { 
     const amount = parseInt(args[0])+1;
   
 
@@ -25,7 +25,7 @@ i
     }
     else if (amount <= 1 || amount > 301) {
       return message.reply('你得輸入1到300的數字!(現在只有1到9可用)');}
-  message.channel.send('TANG',amount, true)
+  message.channel.send(TANG,amount)
     }
 
 
