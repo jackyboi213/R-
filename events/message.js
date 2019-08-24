@@ -27,7 +27,7 @@ module.exports = (client, message) => {
     else if (amount <= 0 || amount > 301) {
        message.reply('你得輸入1到300的數字!(現在只有1到9可用)');return}
  // this is the one which has issues functioning
-  message.channel.send(TANG+amount)
+  message.channel.send[TANG,amount,true]
     }
 
 
