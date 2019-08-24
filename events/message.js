@@ -8,6 +8,7 @@ module.exports = (client, message) => {
   if(!message.content.startsWith(prefix))return;
 
   const args = message.content.slice(prefix.length).split(' ');
+  const command = args.shift().toLowerCase();
     if (message.content === ('!R')){
       message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return}
@@ -16,7 +17,7 @@ module.exports = (client, message) => {
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在唐詩後面加上"第(1至300)"/隨機）');return}
 
   // this ain't working at all below
- else if (message.content.startsWith(`!唐詩`)) { 
+ else if (command === (`唐詩`)) { 
     const amount = parseInt(args[0]);
   
 
