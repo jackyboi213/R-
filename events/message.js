@@ -17,7 +17,7 @@ module.exports = (client, message) => {
 
   // this ain't working at all below
  else if (message.content.startsWith(`!唐詩`)) { 
-    const amount = parseInt(args[0])+1;
+    const amount = parseInt(args[0]);
   
 
     if (isNaN(amount)) {
