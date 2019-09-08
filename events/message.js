@@ -65,8 +65,11 @@ if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then
   else message.reply
   (
       '對不起，那個指令我的主人還沒有幫我打程式，有更多問題請找我的主人。') 
-    message.delete(4160)};
+      setTimeout(function(){message.delete()}, 4000)
+    };
 
 
 
   
+
+
