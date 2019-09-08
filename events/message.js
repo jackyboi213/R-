@@ -14,7 +14,7 @@ module.exports = (client, message) => {
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return}
 
  else if (message.content ===('!詩人')) {message.reply
-  ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在唐詩後面加上"第(1至300)"/隨機）');return}
+  ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在!唐詩後面加上"第(1至300)"/隨機）');return}
 
  else if (command === (`唐詩`)) { 
     const amount = parseInt(args);
@@ -64,12 +64,11 @@ if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then
 
   else message.reply
   (
-      '對不起，那個指令我的主人還沒有幫我打程式，有更多問題請找我的主人。') 
-      setTimeout(function(){message.delete()}, 4000)
+      '對不起，那個指令我的主人還沒有幫我打程式，有更多問題請找我的主人。')
+    .then(d_msg => {d_msg.delete(5000); })
     };
 
 
 
-  
 
 
