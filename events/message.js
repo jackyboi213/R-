@@ -17,7 +17,7 @@ module.exports = (client, message) => {
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在唐詩後面加上"第(1至300)"/隨機）');return}
 
  else if (command === (`唐詩`)) { 
-    const amount = parseInt(args[0]);
+    const amount = parseInt(args);
   
 
     if (isNaN(amount)) {
@@ -45,7 +45,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var random_ROLEA = ROLEA[Math.floor(Math.random()*ROLEA.length)];
 
   if (message.content ===('!身份組 香港')){message.member.addRole(ROLE1).then(console.log)
-    .catch(console.error); setTimeout(function(){ message.reply
+    .catch(console.error); setTimeout(function(){ message.member.send
     (random_ROLEA).then().catch(console.error)}
     , 2100);return
   }
@@ -54,7 +54,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var random_ROLEB = ROLEB[Math.floor(Math.random()*ROLEB.length)];
 
 if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
-  .catch(console.error), setTimeout(function(){ message.reply
+  .catch(console.error), setTimeout(function(){ message.member.send
     (random_ROLEB).then().catch(console.error)}
     , 2100);return
   }
@@ -64,7 +64,8 @@ if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then
 
   else message.reply
   (
-      '對不起，那個指令我的主人還沒有加入我的程式内，有更多問題請找我的主人。')};
+      '對不起，那個指令我的主人還沒有幫我打程式，有更多問題請找我的主人。') 
+    message.delete(4160)};
 
 
 
