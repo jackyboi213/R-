@@ -6,6 +6,7 @@ module.exports = (client, message) => {
     message.channel.send('NNNOOOOOOOOOOOOOOOOOOO!!!!!!');return
    } , 1680).then(d_msg => {d_msg.delete(8300); })
   }
+  prefix = "!"
   var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
   const args = message.content.slice(prefix.length).split(' ');
   const command = args.shift().toLowerCase();
@@ -13,9 +14,7 @@ module.exports = (client, message) => {
   if(!message.content.startsWith(prefix))return;
 
   else if (command === ('R')) {message.reply
-      ('不好意思，我正屬於測試階段，更多資料請找我的主人。')
-    ;return
-    }
+      ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return}
     
   
   else if (command ===('詩人')) {message.reply
