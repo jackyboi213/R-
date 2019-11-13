@@ -12,11 +12,11 @@ module.exports = (client, message) => {
 
   const args = message.content.slice(prefix.length).split(' ');
   const command = args.shift().toLowerCase();
-    if (command === ('!R')){
+    if (command === ('R')){
       message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。').then(d_msg => {d_msg.delete(5210); });return}
 
- else if (command ===('!詩人')) {message.reply
+ else if (command ===('詩人')) {message.reply
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在!唐詩後面加上"第(1至300)"/隨機）');return}
 
  else if (command === ('唐詩')) { 
@@ -31,7 +31,7 @@ module.exports = (client, message) => {
  // this is the one which has issues functioning
 
  
-  message.channel.send(poems[Math.floor(Math.amount()*poems.length)]);return}
+  message.channel.send(poems[Math.floor(amount*poems.length)]);return}
 
 var random_poems = poems[Math.floor(Math.random()*poems.length)];
 if (command === ('唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
