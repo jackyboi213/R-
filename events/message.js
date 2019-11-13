@@ -14,7 +14,7 @@ module.exports = (client, message) => {
 
   else if (command === ('R')) {message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。')
-    .then(d_msg => {d_msg.delete(5210); });return
+    ;return
     }
     
   
