@@ -22,7 +22,6 @@ module.exports = (client, message) => {
  else if (command === ('唐詩')) { 
     const amount = parseInt(args);
   
-
     if (isNaN(amount)) {
       message.reply('你需要在‘!唐詩’後輸入有效的數字');return
 
@@ -32,7 +31,7 @@ module.exports = (client, message) => {
  // this is the one which has issues functioning
 
  
-  message.channel.send(poems[Math.floor(Math.amount)]) }
+  message.channel.send(poems[Math.floor(Math.amount()*poems.length)]);return}
 
 var random_poems = poems[Math.floor(Math.random()*poems.length)];
 if (command === ('唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
