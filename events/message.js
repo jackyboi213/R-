@@ -12,7 +12,7 @@ module.exports = (client, message) => {
 
   const args = message.content.slice(prefix.length).split(' ');
   const command = args.shift().toLowerCase();
-    if (command === ('R')){
+     if (command === ('R')){
       message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。').then(d_msg => {d_msg.delete(5210); });return}
 
@@ -34,7 +34,7 @@ module.exports = (client, message) => {
   message.channel.send(poems[Math.floor(amount*poems.length)]);return}
 
 var random_poems = poems[Math.floor(Math.random()*poems.length)];
-if (command === ('唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
+ if (command === ('唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
 
 // role stuff
 
@@ -54,7 +54,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var ROLEB = [roleB1,roleB2,roleB3,roleB3,roleB3];
   var random_ROLEB = ROLEB[Math.floor(Math.random()*ROLEB.length)];
 
-if (command === ('身份組 台灣')){command.member.addRole(ROLE2).then(console.log)
+ if (command === ('身份組 台灣')){command.member.addRole(ROLE2).then(console.log)
   .catch(console.error), setTimeout(function(){message.member.send
     (random_ROLEB).then().catch(console.error)}
     , 2100);return
