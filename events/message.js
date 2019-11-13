@@ -48,7 +48,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var ROLEA = [roleA1,roleA2,roleA3];
   var random_ROLEA = ROLEA[Math.floor(Math.random()*ROLEA.length)];
 
- if (command === ('身份組 香港')) {message.member.addRole(ROLE1).then(console.log)
+ if (command === ('身份組香港')) {message.member.addRole(ROLE1).then(console.log)
     .catch(console.error); setTimeout(function(){message.member.send
     (random_ROLEA).then().catch(console.error)}
     , 2100);return
@@ -57,7 +57,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var ROLEB = [roleB1,roleB2,roleB3,roleB3,roleB3];
   var random_ROLEB = ROLEB[Math.floor(Math.random()*ROLEB.length)];
 
- if (command === ('身份組 台灣')) {command.member.addRole(ROLE2).then(console.log)
+ if (command === ('身份組台灣')) {command.member.addRole(ROLE2).then(console.log)
   .catch(console.error), setTimeout(function(){message.member.send
     (random_ROLEB).then().catch(console.error)}
     , 2100);return
