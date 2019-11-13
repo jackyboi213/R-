@@ -8,7 +8,7 @@ module.exports = (client, message) => {
   }
   prefix = "!"
   var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
-  const args = message.content.slice(prefix.length).split(' ');
+  const args = message.content.slice(prefix.length).split('');
   const command = args.shift().toLowerCase();
 
   if(!message.content.startsWith(prefix))return;
@@ -16,7 +16,7 @@ module.exports = (client, message) => {
   else if (command === ('R')) {message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return}
     
-  
+  // the above one dont work but the one below? hmmm
   else if (command ===('詩人')) {message.reply
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在!唐詩後面加上"第(1至300)"/隨機）');return}
 
