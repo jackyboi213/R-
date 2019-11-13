@@ -7,15 +7,17 @@ module.exports = (client, message) => {
    } , 1680).then(d_msg => {d_msg.delete(8300); })
   }
   var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
+  const args = message.content.slice(prefix.length).split(' ');
+  const command = args.shift().toLowerCase();
 
   if(!message.content.startsWith(prefix))return;
 
-  const args = message.content.slice(prefix.length).split(' ');
-  const command = args.shift().toLowerCase();
-     if (command === ('R')) {
-      message.reply
-      ('不好意思，我正屬於測試階段，更多資料請找我的主人。').then(d_msg => {d_msg.delete(5210); });return}
+    if (command === ('R')) {message.reply
+      ('不好意思，我正屬於測試階段，更多資料請找我的主人。')
+      .then(d_msg => {d_msg.delete(5210); });return
+    }
 
+  
  else if (command ===('詩人')) {message.reply
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在!唐詩後面加上"第(1至300)"/隨機）');return}
 
