@@ -8,7 +8,7 @@ module.exports = (client, message) => {
   }
   prefix = "!"
   var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const args = message.content.slice(prefix.length).split(/ +/g);
   const command = args.shift();
 
   if(!message.content.startsWith(prefix))return;
