@@ -13,7 +13,7 @@ module.exports = (client, message) => {
 
   if(!message.content.startsWith(prefix))return;
 
-  else if (command.content === ('R')) {message.reply
+  else if (command === ('R')) {message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return
     
     }
