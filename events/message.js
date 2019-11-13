@@ -12,13 +12,13 @@ module.exports = (client, message) => {
 
   if(!message.content.startsWith(prefix))return;
 
-    if (command === ('R')) {message.reply
+  else if (command === ('R')) {message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。')
-      .then(d_msg => {d_msg.delete(5210); });return
+    .then(d_msg => {d_msg.delete(5210); });return
     }
-
+    
   
- else if (command ===('詩人')) {message.reply
+  else if (command ===('詩人')) {message.reply
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在!唐詩後面加上"第(1至300)"/隨機）');return}
 
  else if (command === ('唐詩')) { 
