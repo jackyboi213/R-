@@ -13,7 +13,7 @@ module.exports = (client, message) => {
 
   if(!message.content.startsWith(prefix))return;
 
-  else if (command === ('R')) {message.reply
+  else if (command.content === ('R')) {message.reply
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return}
     
   // the above one dont work but the one below? hmmm
@@ -46,7 +46,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var ROLEA = [roleA1,roleA2,roleA3];
   var random_ROLEA = ROLEA[Math.floor(Math.random()*ROLEA.length)];
 
- if (command === ('身份組 香港')) {message.member.addRole(ROLE1).then(console.log)
+ if (command.content === ('身份組 香港')) {message.member.addRole(ROLE1).then(console.log)
     .catch(console.error); setTimeout(function(){message.member.send
     (random_ROLEA).then().catch(console.error)}
     , 2100);return
