@@ -4,7 +4,7 @@ module.exports = (client, message) => {
     message.channel.send('NNNOOOOOOOOOOOOOOOOOOO!!!!!!');return
    } , 1680)
   }
-// update em to github. 21/8/2019
+
   if(!message.content.startsWith(prefix))return;
 
   const args = message.content.slice(prefix.length).split(' ');
@@ -27,8 +27,9 @@ module.exports = (client, message) => {
     else if (amount <= 0 || amount > 300) {
        message.reply('你得輸入1到300的數字!(現在只有1到9可用)');return}
  // this is the one which has issues functioning
+    let TANGamount = TANG+amount
 
-  message.channel.send(TANG[amount]) }
+  message.channel.send(TANGamount) }
 
 
 var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
@@ -61,14 +62,11 @@ if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then
 
   if (message.content.startsWith('!身份組')) {message.reply
     ('你得在那個指令後面加上你要並有效的身份組的名字。');return}
-
+// may decrease time
   else message.reply
   (
       '對不起，那個指令我的主人還沒有幫我打程式，有更多問題請找我的主人。')
     .then(d_msg => {d_msg.delete(5000); })
     };
-
-
-
 
 
