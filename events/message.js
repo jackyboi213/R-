@@ -1,9 +1,12 @@
 module.exports = (client, message) => {
   if(message.author.bot) return;
-  if (message.content.includes(father1,father2,father3,father4,father5)){setTimeout(function(){ 
+  var fathers = [father1,father2,father3,father4,father5]
+  var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9]
+  if (message.content.includes(fathers)){setTimeout(function(){ 
     message.channel.send('NNNOOOOOOOOOOOOOOOOOOO!!!!!!');return
    } , 1680)
   }
+  var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
 
   if(!message.content.startsWith(prefix))return;
 
@@ -27,14 +30,12 @@ module.exports = (client, message) => {
     else if (amount <= 0 || amount > 300) {
        message.reply('你得輸入1到300的數字!(現在只有1到9可用)');return}
  // this is the one which has issues functioning
-    let TANGamount = TANG+amount
 
-  message.channel.send(TANGamount) }
+ 
+  message.channel.send(poems[Math.floor(Math.amount)]) }
 
-
-var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
 var random_poems = poems[Math.floor(Math.random()*poems.length)];
-if (message.content ===('!唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
+if (command === ('唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
 
 // role stuff
 
@@ -45,7 +46,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var ROLEA = [roleA1,roleA2,roleA3];
   var random_ROLEA = ROLEA[Math.floor(Math.random()*ROLEA.length)];
 
-  if (message.content ===('!身份組 香港')){message.member.addRole(ROLE1).then(console.log)
+  if (command ===('!身份組 香港')){message.member.addRole(ROLE1).then(console.log)
     .catch(console.error); setTimeout(function(){ message.member.send
     (random_ROLEA).then().catch(console.error)}
     , 2100);return
@@ -54,13 +55,13 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var ROLEB = [roleB1,roleB2,roleB3,roleB3,roleB3];
   var random_ROLEB = ROLEB[Math.floor(Math.random()*ROLEB.length)];
 
-if (message.content ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
+if (command ===('!身份組 台灣')){message.member.addRole(ROLE2).then(console.log)
   .catch(console.error), setTimeout(function(){ message.member.send
     (random_ROLEB).then().catch(console.error)}
     , 2100);return
   }
 
-  if (message.content.startsWith('!身份組')) {message.reply
+  if (command.startsWith('!身份組')) {message.reply
     ('你得在那個指令後面加上你要並有效的身份組的名字。');return}
 // may decrease time
   else message.reply
