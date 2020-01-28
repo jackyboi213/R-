@@ -64,11 +64,11 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   (random_ROLEB).then().catch(console.error)}
   , 10000);return}
 
- else message.send
+ else message.channel.send
   ('你得在那個指令後面加上你要並有效的身份組的名字。');return}
  
 // time control
-  else message.send
+  else message.channel.send
   (
       '對不起，那個指令我的主人還沒有幫我打程式，有更多問題請找我的主人。')
     .then(d_msg => {d_msg.delete(4000); })
