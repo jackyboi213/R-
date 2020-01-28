@@ -14,7 +14,7 @@ module.exports = (client, message) => {
  // command area
   if(!message.content.startsWith(prefix))return;
 
-  if (command === ('R')) {message.send
+  if (command === ('R')) {message.channel.send
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return}
 
     
@@ -26,11 +26,11 @@ module.exports = (client, message) => {
     const amount = parseInt(args);
   
     if (isNaN(amount)) {
-      message.send('你需要在‘!唐詩’後輸入有效的數字');return
+      message.channel.send('你需要在‘!唐詩’後輸入有效的數字');return
 
     }
     else if (amount <= 0 || amount > 300) {
-       message.send('你得輸入1到300的數字!(現在只有1到9可用)');return}
+       message.channel.send('你得輸入1到300的數字!(現在只有1到9可用)');return}
  // this is the one which has issues functioning
 
  
@@ -51,8 +51,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var random_ROLEB = ROLEB[Math.floor(Math.random()*ROLEB.length)];
  
  if (command === ('身份組')){
-
-  const RoleName = parseInt(args);
+ const RoleName = parseInt(args);
 
  if (RoleName === ('香港')){message.member.addRole(ROLE1);
   setTimeout(function(){message.member.send
