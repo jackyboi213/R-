@@ -51,14 +51,13 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   var random_ROLEB = ROLEB[Math.floor(Math.random()*ROLEB.length)];
  
  if (command === ('身份組')){
- const RoleName = (args);
-
- if (RoleName === ('香港')){message.member.addRole(ROLE1);
+ 
+ if (command.arg === ('香港')){message.member.addRole(ROLE1);
   setTimeout(function(){message.member.send
   (random_ROLEA).then().catch(console.error)}
   , 10000);return}
 
- else if (RoleName === ('台灣','臺灣')){message.member.addRole(ROLE2);
+ else if (command.arg === ('台灣','臺灣')){message.member.addRole(ROLE2);
    setTimeout(function(){message.member.send
   (random_ROLEB).then().catch(console.error)}
   , 10000);return}
