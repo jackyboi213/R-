@@ -34,7 +34,7 @@ module.exports = (client, message) => {
  // this is the one which has issues functioning
 
  
-  message.channel.send(poems[Math.floor(amount*poems.length)]);return}
+  message.channel.send(poems[args[amount]]);return}
 
 var random_poems = poems[Math.floor(Math.random()*poems.length)];
  if (command === ('唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
