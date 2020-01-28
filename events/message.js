@@ -23,7 +23,7 @@ module.exports = (client, message) => {
   ('在唐詩三百首裏，你希望我為你顯示哪一首呢？（請在!唐詩後面加上"第(1至300)"/隨機）');return}
 
  else if (command === ('唐詩')) { 
-    const amount = parseInt(args);
+    const amount = parseInt(args[0]);
   
     if (isNaN(amount)) {
       message.channel.send('你需要在‘!唐詩’後輸入有效的數字');return
@@ -52,15 +52,15 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
  
  if (command === ('身份組')){
  
- if (args[0] === ('香港')){message.member.addRole(ROLE1);
+ if (args[0] === '香港'){message.member.addRole(ROLE1);
   setTimeout(function(){message.member.send
   (random_ROLEA).then().catch(console.error)}
-  , 10000);return}
+  , 4000);return}
 
- else if (args[0] === ('台灣','臺灣')){message.member.addRole(ROLE2);
+ else if (args[0] === '台灣','臺灣'){message.member.addRole(ROLE2);
    setTimeout(function(){message.member.send
   (random_ROLEB).then().catch(console.error)}
-  , 10000);return}
+  , 4000);return}
 
  else message.channel.send
   ('你得在那個指令後面加上你要並有效的身份組的名字。');return}
