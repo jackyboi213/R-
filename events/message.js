@@ -7,7 +7,7 @@ module.exports = (client, message) => {
    } , 1680).then(d_msg => {d_msg.delete(8300); })
   }
   prefix = "!"
-  var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9,TANG10,TANG11,TANG12,TANG13,TANG14,TANG15,TANG16,TANG17,TANG18,TANG19,TANG20];
+  var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9];
   const args = message.content.slice(prefix.length).split(/ +/g);
   const command = args.shift();
 
@@ -54,13 +54,13 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
 
   const RoleName = parseInt(args);
 
- if (RoleName === ('香港')){message.member.addRole(ROLE1).then(console.log)
-  .catch(console.error); setTimeout(function(){message.member.send
+ if (RoleName === ('香港')){message.member.addRole(ROLE1);
+  setTimeout(function(){message.member.send
   (random_ROLEA).then().catch(console.error)}
   , 10000);return}
 
- else if (Rolename === ('台灣','臺灣')){message.member.addRole(ROLE2).then(console.log)
-  .catch(console.error); setTimeout(function(){message.member.send
+ else if (Rolename === ('台灣','臺灣')){message.member.addRole(ROLE2);
+   setTimeout(function(){message.member.send
   (random_ROLEB).then().catch(console.error)}
   , 10000);return}
 
@@ -68,7 +68,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   ('你得在那個指令後面加上你要並有效的身份組的名字。');return}
  
 // time control
-  else message.reply
+  else message.send
   (
       '對不起，那個指令我的主人還沒有幫我打程式，有更多問題請找我的主人。')
     .then(d_msg => {d_msg.delete(4000); })
