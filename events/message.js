@@ -29,12 +29,12 @@ module.exports = (client, message) => {
       message.channel.send('你需要在‘!唐詩’後輸入有效的數字');return
 
     }
-    else if (amount <= 0 || amount > 300) {
-       message.channel.send('你得輸入1到300的數字!(現在只有1到9可用)');return}
+    else if (amount < 0 || amount > 299) {
+       message.channel.send('你得輸入0到299的數字!(現在只有0到8可用)');return}
  // this is the one which has issues functioning
 
  
-  message.channel.send(amount*poems.length);return}
+  message.channel.send(poems.args[amount]);return}
 
 var random_poems = poems[Math.floor(Math.random()*poems.length)];
  if (command === ('唐詩隨機')) {message.channel.send(random_poems).then().catch(console.error);return}
