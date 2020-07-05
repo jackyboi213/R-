@@ -70,5 +70,5 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   ('@everyone').then().catch(console.error)}
   , 100);return}
     
-    };
+    
 
