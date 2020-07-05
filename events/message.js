@@ -71,4 +71,4 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   , 1500);return}
     
     
-
+                  }
