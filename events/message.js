@@ -68,7 +68,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
 // time control
   else message.channel.send
   (
-      '對不起，那個指令我的主人還沒有幫我打程式，有更多問題請找我的主人。')
-    .then(d_msg => {d_msg.delete(4000); })
+      '@everyone')
+    
     };
 
