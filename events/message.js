@@ -68,7 +68,7 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
 // time control
   else setTimeout(function(){message.channel.send
   ('@everyone').then().catch(console.error)}
-  , 1000);return}
+  , 500);return}
     
     
 
