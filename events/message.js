@@ -66,9 +66,9 @@ let ROLE2 = message.guild.roles.find(role => role.name === "台灣");
   ('你得在那個指令後面加上你要並有效的身份組的名字。');return}
  
 // time control
-  else message.channel.send
-  (
-      '@everyone')
+  else setTimeout(function(){message.channel.send
+  ('@everyone').then().catch(console.error)}
+  , 100);return}
     
     };
 
