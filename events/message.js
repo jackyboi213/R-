@@ -1,5 +1,5 @@
 module.exports = (client, message) => {
-  if(message.author.bot) return;
+ 
   var fathers = [father1,father2,father3,father4,father5]
   var poems = [TANG1,TANG2,TANG3,TANG4,TANG5,TANG6,TANG7,TANG8,TANG9]
   if (message.content.includes(fathers)){setTimeout(function(){ 
@@ -12,7 +12,6 @@ module.exports = (client, message) => {
   const command = args.shift().toLowerCase();
 
  // command area
-  if(!message.content.startsWith(prefix))return;
 
   if (command === ('R')) {message.channel.send
       ('不好意思，我正屬於測試階段，更多資料請找我的主人。');return}
